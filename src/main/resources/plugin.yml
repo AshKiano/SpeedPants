@@ -1,0 +1,8 @@
+name: SpeedPants
+version: '${project.version}'
+main: com.ashkiano.speedpants.SpeedPants
+api-version: '1.16'
+authors: [AshKiano]
+commands:
+  speedpants:
+    description: Gives the player a pair of speed pants.
