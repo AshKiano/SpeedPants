@@ -1,3 +1,4 @@
 command_permission: 'speedpants'
-speedpants-name: "SpeedPants"
+speedpants-name: "Speed pants"
+speedpants-lore: "Enjoy your speed!"
 speed-value: 2

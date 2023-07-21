@@ -13,14 +13,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.Arrays;
 
 public class SpeedPantsCommand implements CommandExecutor {
-    public static final String SPEED_PANTS_LORE = ChatColor.GRAY + "Speed pants";
-
+    public static String SPEED_PANTS_LORE;
     private final JavaPlugin plugin;
     private String permission;
 
     public SpeedPantsCommand(String permission, JavaPlugin plugin) {
         this.permission = permission;
         this.plugin = plugin;
+        SPEED_PANTS_LORE = ChatColor.GRAY + plugin.getConfig().getString("speedpants-lore", "Enjoy your speed!");
     }
 
     @Override
@@ -33,7 +33,7 @@ public class SpeedPantsCommand implements CommandExecutor {
                 return true;
             }
 
-            String speedPantsName = plugin.getConfig().getString("speedpants-name", "SpeedPants");
+            String speedPantsName = plugin.getConfig().getString("speedpants-name", "Speed pants");
             ItemStack speedPants = new ItemStack(Material.LEATHER_LEGGINGS);
             LeatherArmorMeta meta = (LeatherArmorMeta) speedPants.getItemMeta();
             meta.setLore(Arrays.asList(SPEED_PANTS_LORE));
