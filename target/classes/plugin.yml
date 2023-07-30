@@ -1,5 +1,5 @@
 name: SpeedPants
-version: '1.5'
+version: '1.7'
 main: com.ashkiano.speedpants.SpeedPants
 api-version: '1.16'
 authors: [AshKiano]

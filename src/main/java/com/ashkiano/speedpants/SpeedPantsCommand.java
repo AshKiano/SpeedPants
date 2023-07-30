@@ -1,6 +1,7 @@
 package com.ashkiano.speedpants;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Color;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -36,6 +37,7 @@ public class SpeedPantsCommand implements CommandExecutor {
             String speedPantsName = plugin.getConfig().getString("speedpants-name", "Speed pants");
             ItemStack speedPants = new ItemStack(Material.LEATHER_LEGGINGS);
             LeatherArmorMeta meta = (LeatherArmorMeta) speedPants.getItemMeta();
+            meta.setColor(Color.BLUE);
             meta.setLore(Arrays.asList(SPEED_PANTS_LORE));
             meta.setDisplayName(speedPantsName);
             speedPants.setItemMeta(meta);
