@@ -21,7 +21,7 @@ public class SpeedPants extends JavaPlugin {
         getCommand("speedpants").setExecutor(new SpeedPantsCommand(permission, this));
         getServer().getPluginManager().registerEvents(new SpeedPantsListener(this), this);
 
-        System.out.println("Thank you for using the SpeedPants plugin! If you enjoy using this plugin, please consider making a donation to support the development. You can donate at: https://paypal.me/josefvyskocil");
+        this.getLogger().info("Thank you for using the SpeedPants plugin! If you enjoy using this plugin, please consider making a donation to support the development. You can donate at: https://paypal.me/josefvyskocil");
 
         Metrics metrics = new Metrics(this, 19029);
     }
